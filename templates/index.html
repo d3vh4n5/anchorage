@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hola desde un html</h1>
+    <h2>Estamos en al clase 13, sigue la 14</h2>
+    <p>
+        Este proyecto se llama: {{proyecto}}
+    </p>
+    <p>
+        Está creado con la tecnología: {{tecnología|upper}}
+    </p>
+    <p>
+        Y le voy a meter Bootstrap.
+    </p>
+    <p>
+        Hoy es: {{fecha}}
+    </p>
+    {% for variable in lista %}
+    <p style="color: {% cycle 'blue' 'red' %}">Variable: {{variable}}</p>
+    {% endfor %}
+</body>
+</html>
