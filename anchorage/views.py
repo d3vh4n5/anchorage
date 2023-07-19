@@ -19,8 +19,14 @@ def index(request):
     return render(request, 'anchorage/index.html', context)
 
 def login(request):
-    return HttpResponse("Aquí ira el login")
+    return render(request, 'anchorage/pages/login.html')
+
+
+def userpage(request):
+    context={}
+    return render(request, 'anchorage/pages/userpage.html', context)
+
+
 
 def parametro(request, data):
-
     return HttpResponse(data)

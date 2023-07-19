@@ -20,7 +20,7 @@ from anchorage import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('anchorage.urls')),
-    path('login/', include('anchorage.urls')),
-    path('parametro/', include('anchorage.urls')),
+    path('', include('anchorage.urls'), name='index'),
+    # path('login/', include('anchorage.urls'), name='login'),
+    # path('parametro/', include('anchorage.urls')),
 ]

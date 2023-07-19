@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block titulo %}Enlaces{% endblock titulo %}
+{% block estilos_extra %}{% endblock estilos_extra %}
+{% block contenido %}
+    <h1>Aquí irán las tarjetitas de enlaces</h1>
+    {% for variable in lista %}
+    <p style="color: {% cycle 'blue' 'red' %}">Variable: {{variable}}</p>
+    {% endfor %}
+{% endblock contenido %}

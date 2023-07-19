@@ -1,9 +1,12 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block titulo %}Inicio{% endblock titulo %}
-{% block estilos %}{% endblock estilos %}
+{% block estilos_extra %}{% endblock estilos_extra %}
 {% block contenido %}
-    <h1>Hola desde un html</h1>
-    <h2>Estamos en al clase 14 al minuto 51, me voy a dormir y despues la termino.</h2>
+
+    <img src="{% static 'anchorage/img/submarino.png' %}">
+        <h1>Hola desde un html</h1>
+    <h2>Estamos en al clase 14, sigue la 16 porque 15 no existe.</h2>
     <p>
         Este proyecto se llama: {{proyecto}}
     </p>
@@ -19,4 +22,11 @@
     {% for variable in lista %}
     <p style="color: {% cycle 'blue' 'red' %}">Variable: {{variable}}</p>
     {% endfor %}
+
+
+
+
+
+
+
 {% endblock contenido %}
