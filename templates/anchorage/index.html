@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block titulo %}Inicio{% endblock titulo %}
+{% block estilos %}{% endblock estilos %}
+{% block contenido %}
     <h1>Hola desde un html</h1>
-    <h2>Estamos en al clase 13, sigue la 14</h2>
+    <h2>Estamos en al clase 14 al minuto 51, me voy a dormir y despues la termino.</h2>
     <p>
         Este proyecto se llama: {{proyecto}}
     </p>
@@ -23,5 +19,4 @@
     {% for variable in lista %}
     <p style="color: {% cycle 'blue' 'red' %}">Variable: {{variable}}</p>
     {% endfor %}
-</body>
-</html>
+{% endblock contenido %}

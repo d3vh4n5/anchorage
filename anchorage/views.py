@@ -16,7 +16,7 @@ def index(request):
             True
         ]
     }
-    return render(request, 'index.html', context)
+    return render(request, 'anchorage/index.html', context)
 
 def login(request):
     return HttpResponse("Aquí ira el login")
