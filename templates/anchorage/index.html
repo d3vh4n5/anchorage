@@ -1,8 +1,31 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block titulo %}Inicio{% endblock titulo %}
-{% block estilos_extra %}{% endblock estilos_extra %}
+{% block estilos_extra %}
+<link rel="stylesheet" href="{% static 'anchorage/css/estilos.css' %}">
+{% endblock estilos_extra %}
 {% block contenido %}
+    <section class="hero">
+        <div>
+            <h1 class="text-light">Simplifica tus invitaciones</h1>
+            <p class="text-light">
+                Con Anchorage, podrás acortar tus enlaces, hacerles un seguimiento y 
+                obtener información de los mismos.
+            </p>
+        </div>
+        <img src="{% static 'anchorage/img/qr.png' %}">
+    </section>
+    <main class="container-fluid">
+        <h2>Porqué usar un acortador de url?</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Nisi magnam illum architecto quod distinctio in hic doloribus qui 
+            est consequuntur.
+        </p>
+        
+        <h2>Prueba tambien nuestro qrmaker</h2>
+        <img src="{% static 'anchorage/img/qr.png' %}">
+
 
     <img src="{% static 'anchorage/img/submarino.png' %}">
         <h1>Hola desde un html</h1>
@@ -23,7 +46,7 @@
     <p style="color: {% cycle 'blue' 'red' %}">Variable: {{variable}}</p>
     {% endfor %}
 
-
+    </main>
 
 
 

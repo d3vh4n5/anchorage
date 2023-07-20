@@ -26,6 +26,9 @@ def userpage(request):
     context={}
     return render(request, 'anchorage/pages/userpage.html', context)
 
+def signup(request):
+    context = {}
+    return render(request, 'anchorage/pages/signup.html', context)
 
 
 def parametro(request, data):
