@@ -6,50 +6,59 @@
 {% endblock estilos_extra %}
 {% block contenido %}
     <section class="hero">
+        {% include 'anchorage/partials/header.html' %}
         <div>
             <h1 class="text-light">Simplifica tus invitaciones</h1>
             <p class="text-light">
-                Con Anchorage, podrás acortar tus enlaces, hacerles un seguimiento y 
-                obtener información de los mismos.
+                Haz tus enlaces mas simples, cómodos y efectivos. Descubre todas las
+                ventajas de usar Anchorage para acortar tus enlaces.
             </p>
         </div>
         <img src="{% static 'anchorage/img/qr.png' %}">
     </section>
     <main class="container-fluid">
-        <h2>Porqué usar un acortador de url?</h2>
-        <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Nisi magnam illum architecto quod distinctio in hic doloribus qui 
-            est consequuntur.
-        </p>
-        
-        <h2>Prueba tambien nuestro qrmaker</h2>
-        <img src="{% static 'anchorage/img/qr.png' %}">
+        <div class="row border justify-content-md-center ">
+            <div class="col-12 col-md-4 border border-danger border-3">
 
-
-    <img src="{% static 'anchorage/img/submarino.png' %}">
-        <h1>Hola desde un html</h1>
-    <h2>Estamos en al clase 14, sigue la 16 porque 15 no existe.</h2>
-    <p>
-        Este proyecto se llama: {{proyecto}}
-    </p>
-    <p>
-        Está creado con la tecnología: {{tecnología|upper}}
-    </p>
-    <p>
-        Y le voy a meter Bootstrap.
-    </p>
-    <p>
-        Hoy es: {{fecha}}
-    </p>
-    {% for variable in lista %}
-    <p style="color: {% cycle 'blue' 'red' %}">Variable: {{variable}}</p>
-    {% endfor %}
-
+                
+                <h2>Porqué usar un acortador de url?</h2>
+                <ul>
+                    <li>Puedes proteger información sesible o las querys del URI</li>
+                    <li>Crearás posts más prolijos, con menos caracteres</li>
+                    <li>Facilidad para copiar el link a mano, en caso de ser necesario</li>
+                    <li>Personalizar tus urls</li>
+                    <li>Obtener estadísticas y hacer un seguimiento al acceso de las mismas</>
+                    </ul>
+                    
+                    <h2>Prueba tambien nuestro qrmaker</h2>
+                    <img src="{% static 'anchorage/img/qr.png' %}">
+                    
+                    
+                    <img src="{% static 'anchorage/img/submarino.png' %}">
+                    <h1>Hola desde un html</h1>
+                    <h2>Estamos en al clase 14, sigue la 16 porque 15 no existe.</h2>
+                    <p>
+                        Este proyecto se llama: {{proyecto}}
+                    </p>
+                    <p>
+                        Está creado con la tecnología: {{tecnología|upper}}
+                    </p>
+                    <p>
+                        Y le voy a meter Bootstrap.
+            </p>
+            <p>
+                Hoy es: {{fecha}}
+            </p>
+            {% for variable in lista %}
+            <p style="color: {% cycle 'blue' 'red' %} ">Variable: {{variable}}</p>
+            {% endfor %}
+            
+        </div>
+        </div>
     </main>
-
-
-
-
-
-{% endblock contenido %}
+    
+    
+    
+    
+    
+    {% endblock contenido %}

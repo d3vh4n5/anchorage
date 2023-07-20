@@ -4,7 +4,8 @@
     background-image: url(https://images.theconversation.com/files/246673/original/file-20181121-161621-tvw7sv.jpg?ixlib=rb-1.1.0&rect=49%2C199%2C5550%2C2775&q=45&auto=format&w=1356&h=668&fit=crop);
     background-size: cover;
     background-position: 50%;
-    height: 600px;
+    height: 800px;
+    clip-path: polygon(0 0 ,100% 0, 100% 80%,  0% 100%, 0 100%);
 }
 
 footer{

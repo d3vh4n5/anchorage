@@ -23,7 +23,15 @@ def login(request):
 
 
 def userpage(request):
-    context={}
+    context = {
+        "lista" : [
+            "enlace1",
+            "enlace2",
+            "enlace3",
+            "enlace4",
+            "enlace5",
+        ],
+    }
     return render(request, 'anchorage/pages/userpage.html', context)
 
 def signup(request):
