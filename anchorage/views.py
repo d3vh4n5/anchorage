@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from datetime import datetime
+from .forms import *
 
 # Create your views here.
 
@@ -35,7 +36,11 @@ def userpage(request):
     return render(request, 'anchorage/pages/userpage.html', context)
 
 def signup(request):
-    context = {}
+    if request.method == "POST":
+        signup_form = SignUp(request.POST)
+    else:
+        signup_form = SignUp()
+    context = {'signup_form': signup_form}
     return render(request, 'anchorage/pages/signup.html', context)
 
 

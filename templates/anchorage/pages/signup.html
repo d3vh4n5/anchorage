@@ -4,5 +4,16 @@
 {% block estilos_extra %}
 {% endblock estilos_extra %}
 {% block contenido %}
-<h1>Aquí irá el formulario</h2>
+
+
+    <form action="{% url 'signup' %}" method="post">
+        {% csrf_token %}
+        {% comment %} {{ signup_form}} {% endcomment %}
+        <table>
+            {{ signup_form.as_table}}
+        </table>
+        <input type="submit" value="registrarse">
+    </form>
+
+
 {% endblock contenido %}
