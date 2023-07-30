@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from datetime import datetime
 from .forms import *
@@ -19,6 +19,22 @@ def index(request):
         ]
     }
     return render(request, 'anchorage/index.html', context)
+
+def redirector(request, avatar):
+    direcciones = (
+        ('url1', 'https://google.com'),
+        ('url2', 'https://facebook.com'),
+        ('url3', 'https://mercadolibre.com.ar'),
+    )
+
+    url = 'Nada por aquí'
+
+    for direccion in direcciones:
+        if avatar == direccion[0]:
+            url = direccion[1]
+
+    return HttpResponse(f'<h1>{url}</h1>')
+    # return redirect(url)
 
 def login(request):
     if request.method == 'POST':
