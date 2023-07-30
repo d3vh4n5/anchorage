@@ -25,3 +25,14 @@ footer{
 footer p{
     margin: 0;
 }
+
+/* Los errores por defecto de los forms de django: */
+
+.errorlist > li{
+    all: unset;
+    color: red;
+    border: 1px solid;
+    padding: 3px;
+    background-color: rgba(255, 192, 203, 0.685);
+    border-radius: 5px;
+}

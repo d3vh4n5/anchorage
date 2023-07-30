@@ -37,18 +37,25 @@
                 <form action="{% url 'signup' %}" method="post">
                     {% csrf_token %}
                     <div class="mb-3">
+                        {{signup_form.nombre.errors}}
                         <label for="{{ signup_form.nombre.id_for_label }}" class="form-label">Nombre de usuario:</label>
                         {{ signup_form.nombre }}
                     </div>
                     <div class="mb-3">
+                        {{signup_form.email.errors}}
                         <label for="{{ signup_form.email.id_for_label }}" class="form-label">e-mail:</label>
                         {{ signup_form.email }}
                     </div>
                     <div class="mb-3">
+                        {{signup_form.password.errors}}
                         <label for="{{ signup_form.password.id_for_label }}" class="form-label">Contraseña:</label>
                         {{ signup_form.password }}
+                        <span id="passwordHelpInline" class="form-text">
+                            Debe tener entre 8 y 10 caracteres.
+                        </span>
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-3 col-6">
+                        {{signup_form.nacimiento.errors}}
                         <label for="{{ signup_form.nacimiento.id_for_label }}" class="form-label">Fecha de nacimiento:</label>
                         {{ signup_form.nacimiento }}
                     </div>
@@ -57,6 +64,7 @@
                         {{ signup_form.sexo }}
                     </div>
                     <div class="mb-3 form-check">
+                        {{signup_form.terms.errors}}
                         {{ signup_form.terms }}
                         <label for="{{ signup_form.terms.id_for_label }}" class="form-label">He leído y acepto los <a href="#">Términos de uso</a>.</label>
                     </div>
@@ -66,9 +74,13 @@
             </div>
         </div>
         {% comment %} Capta error individual {% endcomment %}
-        {% comment %} {{signup_form.email.errors}} {% endcomment %}
+        {% comment %} {{signup_form.nombre.errors}}
+        {{signup_form.email.errors}}
+        {{signup_form.password.errors}}
+        {{signup_form.nacimiento.errors}}
+        {{signup_form.terms.errors}} {% endcomment %}
         {% comment %} Capta todos los errores: {% endcomment %}
-        {{signup_form.errors}}
+        {% comment %} {{signup_form.errors}} {% endcomment %}
         {% if messages %}
             <div>
                 {% for message in messages %}
