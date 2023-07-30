@@ -4,16 +4,87 @@
 {% block estilos_extra %}
 {% endblock estilos_extra %}
 {% block contenido %}
+    {% comment %} Incluyo el header por ahora {% endcomment %}
+    {% include 'anchorage/partials/header.html' %}
 
+    {% comment %} <div class="container-sm">
+        <div class="row justify-content-center">
+            <div class="col-4 border rounded p-3 m-5 bg-light">
+                <form action="{% url 'signup' %}" method="post">
+                    {% csrf_token %}
+                    {{ signup_form}}
+                    {% comment %} <table>
+                        {{ signup_form.as_table}}
+                    </table> 
+                    {% endcomment %}
 
-    <form action="{% url 'signup' %}" method="post">
-        {% csrf_token %}
-        {% comment %} {{ signup_form}} {% endcomment %}
-        <table>
-            {{ signup_form.as_table}}
-        </table>
-        <input type="submit" value="registrarse">
-    </form>
+                    {% comment %}
+                    <div class="custom-label">
+                        {{ form.terms }}
+                        <a href="/terminos-de-uso/">Términos de uso</a>
+                    </div>
+                    <br>
+                    <input type="submit" class="btn btn-primary" value="Registrarse">
+                </form>
+            </div>
+        </div>
+    </div> {% endcomment %}
+
+    <div class="container-sm">
+        
+        <div class="row justify-content-center">
+            <div class="col-11 col-sm-8 col-md-6 col-lg-4  border rounded p-3 m-5 bg-light">
+                <form action="{% url 'signup' %}" method="post">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="{{ signup_form.nombre.id_for_label }}" class="form-label">Nombre de usuario:</label>
+                        {{ signup_form.nombre }}
+                    </div>
+                    <div class="mb-3">
+                        <label for="{{ signup_form.email.id_for_label }}" class="form-label">e-mail:</label>
+                        {{ signup_form.email }}
+                    </div>
+                    <div class="mb-3">
+                        <label for="{{ signup_form.password.id_for_label }}" class="form-label">Contraseña:</label>
+                        {{ signup_form.password }}
+                    </div>
+                    <div class="mb-3">
+                        <label for="{{ signup_form.nacimiento.id_for_label }}" class="form-label">Fecha de nacimiento:</label>
+                        {{ signup_form.nacimiento }}
+                    </div>
+                    <div class="mb-3">
+                        <label for="{{ signup_form.sexo.id_for_label }}" class="form-label">Sexo:</label>
+                        {{ signup_form.sexo }}
+                    </div>
+                    <div class="mb-3 form-check">
+                        {{ signup_form.terms }}
+                        <label for="{{ signup_form.terms.id_for_label }}" class="form-label">He leído y acepto los <a href="#">Términos de uso</a>.</label>
+                    </div>
+                    <br>
+                    <input type="submit" class="btn btn-primary" value="Registrarse">
+                </form>
+            </div>
+        </div>
+        {% comment %} Capta error individual {% endcomment %}
+        {% comment %} {{signup_form.email.errors}} {% endcomment %}
+        {% comment %} Capta todos los errores: {% endcomment %}
+        {{signup_form.errors}}
+        {% if messages %}
+            <div>
+                {% for message in messages %}
+                    {% if message.tags == 'error' %}
+                        <div class="alert alert-danger text-danger" role="alert">
+                                {{message}}
+                        </div>
+                    {% else %}
+                        <div class="alert alert-success text-success" role="alert">
+                            {{message}}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
 
 
 {% endblock contenido %}
