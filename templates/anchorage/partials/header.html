@@ -1,11 +1,10 @@
-<div class="container-fluid navbar-dark bg-dark">
+{% comment %} <div class="container-fluid navbar-dark bg-dark">
     <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
         <div class="col-md-3 mb-2 mb-md-0">
         <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
             <h2>⛵</h2>
         </a>
         </div>
-
         <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
         <li><a href="{% url 'index' %}" class="nav-link px-2 link-secondary">Home</a></li>
         <li><a href="{% url 'userpage' %}" class="nav-link px-2">Userpage</a></li>
@@ -20,4 +19,26 @@
         <a href="{% url 'signup' %}" class="btn btn-primary">Sign-up</a>
         </div>
     </header>
-</div>
+</div> {% endcomment %}
+
+<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+            <h2>⛵</h2>
+        </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li><a href="{% url 'index' %}" class="nav-link px-2 text-primary-emphasis">Home</a></li>
+            <li><a href="{% url 'userpage' %}" class="nav-link px-2 text-primary">Userpage</a></li>
+            <li><a href="#" class="nav-link px-2 text-primary">About</a></li>
+        </ul>
+        <div class="col-md-3 text-end">
+            <a href="{% url 'login' %}" class="btn btn-outline-primary me-2">Login</a>
+            <a href="{% url 'signup' %}" class="btn btn-primary">Sign-up</a>
+        </div>
+      </div>
+    </div>
+  </nav>
