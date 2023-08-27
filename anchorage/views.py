@@ -18,7 +18,7 @@ def index(request):
             True
         ]
     }
-    return render(request, 'anchorage/index.html', context)
+    return render(request, 'anchorage/public/pages/index.html', context)
 
 def redirector(request, avatar):
     direcciones = (
@@ -48,7 +48,7 @@ def login(request):
     else:
         login_form = Login()
     context = {'login_form' : login_form}
-    return render(request, 'anchorage/pages/login.html', context)
+    return render(request, 'anchorage/public/pages/login.html', context)
 
 
 def userpage(request):
@@ -61,7 +61,8 @@ def userpage(request):
             "enlace5",
         ],
     }
-    return render(request, 'anchorage/pages/userpage.html', context)
+    return render(request, 'anchorage/admin/pages/userpage.html', context)
+    # return render(request, 'anchorage/admin/partials/base.html', context)
 
 def signup(request):
     if request.method == "POST":
@@ -75,7 +76,7 @@ def signup(request):
     else:
         signup_form = SignUp()
     context = {'signup_form': signup_form}
-    return render(request, 'anchorage/pages/signup.html', context)
+    return render(request, 'anchorage/public/pages/signup.html', context)
 
 
 def parametro(request, data):

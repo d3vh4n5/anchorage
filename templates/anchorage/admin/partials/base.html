@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'anchorage/css/admin.css' %}">
+    <title>Admin</title>
+    
+</head>
+<body>
+    
+    <div class="d-flex">
+        <div id="sidebar-container" class="bg-dark h-100 text-light">
+            <header class="sidebar-header">
+                <div class="logo text-light">
+                    Anchorage
+                </div>
+            </header>
+            <hr>
+            <main class="sidebar-body">
+                <div class="menu">
+                    <div>
+                        <a href="#" class="d-block p-3"><i class="icon ion-md-add m-2 lead"></i> Nuevo</a>
+                    </div>
+                    <div>
+                        <a href="#" class="d-block p-3"><i class="icon ion-md-apps m-2 lead"></i> Direcciones</a>
+                    </div>
+                    <div>
+                        <a href="#" class="d-block p-3"><i class="icon ion-md-stats m-2 lead"></i> Estadísticas</a>
+                    </div>
+                    <div>
+                        <a href="#" class="d-block p-3"><i class="icon ion-md-settings m-2 lead"></i> Opcion</a>
+                    </div>
+                </div>
+            </main>
+            <hr>
+            <footer class="sidebar-footer">
+                <p class="logo ">Footer</p>
+            </footer>
+        </div>
+        <div class="w-100">
+            <ul class="nav justify-content-end bg-light">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Active</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+            {% block contenido %} 
+            {% endblock %} 
+        </div>
+
+    </div>
+
+
+
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script  src="{% static 'anchorage/js/admin.js' %}"></script>
+</body>
+</html>

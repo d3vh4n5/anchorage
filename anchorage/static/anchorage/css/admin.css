@@ -1,0 +1,25 @@
+:root{
+
+}
+
+body{
+  overflow: hidden;
+  /* background-color: #e7e7e7; */
+}
+
+#sidebar-container{
+  min-height: 100vh;
+}
+
+.logo{
+  padding: .8rem 1.2rem;
+}
+
+.menu{
+  width: 18rem;
+  height: 80vh;
+}
+
+a{
+  text-decoration: none;
+}

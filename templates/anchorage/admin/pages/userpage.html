@@ -1,0 +1,30 @@
+{% extends 'anchorage/admin/partials/base.html' %}
+{% load static %}
+{% block contenido %}
+    {% comment %} {% include 'anchorage/public/partials/header.html' %} {% endcomment %}
+
+    <div class="container">
+            <p>Recordar que en los forms de django hay un input de tipo URL. 
+                Muy útil para esta parte. Ya que validará que lo que ingresemos
+                 en el capo sea una url.
+            </p>
+            <p>
+                https://www.youtube.com/watch?v=5SUvT9sjdUE&t=906s
+            </p>
+            {% for variable in lista %}
+                <div class="card">
+                    <div class="card-header">
+                        Featured
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                
+                <p style="color: {% cycle 'blue' 'red' %}">Variable: {{variable}}</p>
+            {% endfor %}
+
+    </div>
+{% endblock contenido %}
