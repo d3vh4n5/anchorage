@@ -1,5 +1,5 @@
 :root{
-
+  --variable: 'algo';
 }
 
 body{
@@ -22,4 +22,60 @@ body{
 
 a{
   text-decoration: none;
+}
+
+ /* Estilos personalizados */
+ body {
+  background-color: #f8f9fa;
+  transition: margin-left 0.3s ease-in-out;
+}
+.navbar,
+.main {
+  transition: margin-left 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -250px; /* Colapsado por defecto */
+  z-index: 1000;
+  padding: 48px 0 0;
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
+  background-color: #343a40;
+  width: 250px;
+  transition: left 0.3s ease-in-out;
+}
+.sidebar.active {
+  left: 0; /* Expandido */
+}
+
+.contenido-principal{
+    transition: all 0.3s ease-in-out;
+}
+.contenido-encoger{
+    margin-left: 250px;
+}
+
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: 48px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.sidebar .nav-link {
+  color: #dcdcdc;
+}
+.sidebar .nav-link.active {
+  color: #fff;
+  font-weight: bold;
+}
+.main {
+  padding: 20px;
+  width: 100%;
+}
+.expanded-main {
+  width: calc(100% - 250px);
+  margin-left: 250px;
 }

@@ -10,58 +10,47 @@
     <title>Admin</title>
     
 </head>
-<body>
-    
-    <div class="d-flex">
-        <div id="sidebar-container" class="bg-dark h-100 text-light">
-            <header class="sidebar-header">
-                <div class="logo text-light">
-                    Anchorage
-                </div>
-            </header>
-            <hr>
-            <main class="sidebar-body">
-                <div class="menu">
-                    <div>
-                        <a href="#" class="d-block p-3"><i class="icon ion-md-add m-2 lead"></i> Nuevo</a>
-                    </div>
-                    <div>
-                        <a href="#" class="d-block p-3"><i class="icon ion-md-apps m-2 lead"></i> Direcciones</a>
-                    </div>
-                    <div>
-                        <a href="#" class="d-block p-3"><i class="icon ion-md-stats m-2 lead"></i> Estadísticas</a>
-                    </div>
-                    <div>
-                        <a href="#" class="d-block p-3"><i class="icon ion-md-settings m-2 lead"></i> Opcion</a>
-                    </div>
-                </div>
-            </main>
-            <hr>
-            <footer class="sidebar-footer">
-                <p class="logo ">Footer</p>
-            </footer>
-        </div>
-        <div class="w-100">
-            <ul class="nav justify-content-end bg-light">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Active</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                </li>
+<body class="active-sidebar">
+
+    <section class="contenido-principal contenido-encoger">
+        <!-- Barra de navegación superior -->
+        <!-- <nav class="navbar navbar-dark bg-dark ps-3 fixed-top"> -->
+        <nav class="navbar navbar-dark bg-dark ps-3">
+        <button class="navbar-toggler" type="button" id="sidebarToggle">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        </nav>
+
+        <!-- Barra de navegación lateral -->
+        <nav class="col-md-3 col-lg-2 d-md-block bg-dark sidebar active" id="sidebar">
+        <div class="position-sticky sidebar-sticky">
+            <ul class="nav flex-column">
+            <li class="nav-item">
+                <a href="#" class="d-block p-3"><i class="icon ion-md-add m-2 lead"></i> Nuevo</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="d-block p-3"><i class="icon ion-md-add m-2 lead"></i> Listar</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="d-block p-3"><i class="icon ion-md-apps m-2 lead"></i> Direcciones</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="d-block p-3"><i class="icon ion-md-stats m-2 lead"></i> Estadísticas</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="d-block p-3"><i class="icon ion-md-settings m-2 lead"></i> Opcion</a>
+            </li>
             </ul>
+        </div>
+        </nav>
+
+        <div class="container">
+            <h1 class="bg-dark text-light rounded-bottom-4 text-center p-2">Titulo loco</h1>
             {% block contenido %} 
             {% endblock %} 
         </div>
 
-    </div>
-
+    </section>
 
 
     

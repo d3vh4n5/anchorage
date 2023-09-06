@@ -7,18 +7,22 @@
 {% block contenido %}
     <section class="hero">
         {% include 'anchorage/public/partials/header.html' %}
-        <div>
-            <h1 class="text-light">Simplifica tus invitaciones de links</h1>
-            <p class="text-light">
-                Haz tus enlaces mas simples, cómodos y efectivos. Descubre todas las
-                ventajas de usar Anchorage para acortar tus enlaces.
-            </p>
+        <div class="container">
+
+            <div>
+                <h1 class="text-light">Simplifica tus invitaciones de links</h1>
+                <p class="text-light">
+                    Haz tus enlaces mas simples, cómodos y efectivos. Descubre todas las
+                    ventajas de usar Anchorage para acortar tus enlaces.
+                </p>
+            </div>
+            <img src="{% static 'anchorage/img/qr.png' %}">
         </div>
-        <img src="{% static 'anchorage/img/qr.png' %}">
     </section>
-    <main class="container-fluid">
+    <main class="container">
         <div class="row justify-content-md-center ">
-            <div class="col-xl-7 col-md-12 bg-light m-4 rounded">
+            {% comment %} <div class="col-xl-7 col-md-12 bg-light m-4 rounded"> {% endcomment %}
+            <div>
 
                 <section>
                     
