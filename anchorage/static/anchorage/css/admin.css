@@ -4,7 +4,6 @@
 
 body{
   overflow: hidden;
-  /* background-color: #e7e7e7; */
 }
 
 #sidebar-container{
@@ -26,7 +25,6 @@ a{
 
  /* Estilos personalizados */
  body {
-  background-color: #f8f9fa;
   transition: margin-left 0.3s ease-in-out;
 }
 .navbar,
@@ -78,4 +76,24 @@ a{
 .expanded-main {
   width: calc(100% - 250px);
   margin-left: 250px;
+}
+
+
+.container{
+  height: 100vh;
+}
+.container::-webkit-scrollbar{
+  width: 5px;
+}
+.container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.container::-webkit-scrollbar-thumb {
+  background: #88888888;
+  border-radius: 5px;
+}
+
+
+footer{
+  height: 20vh !important;
 }
