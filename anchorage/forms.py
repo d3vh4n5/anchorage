@@ -1,6 +1,7 @@
 from django import forms
 from django.core import validators
 from django.forms import ValidationError
+from .models import *
 
 def largo_validate(value):
     print(value)
@@ -39,3 +40,9 @@ class Login(forms.Form):
         required=True, 
         widget=forms.CheckboxInput(attrs={'class': 'form-check-input mt-2 mb-2'})
     )
+
+# Formularios a partir de modelos
+class LinkForm(forms.ModelForm):
+    class Meta:
+        model: Link
+        fields = ("alias", "url")

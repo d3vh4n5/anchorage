@@ -51,6 +51,8 @@ def login(request):
     return render(request, 'anchorage/public/pages/login.html', context)
 
 
+# USERPAGE
+
 def userpage(request):
     context = {
         "lista" : [
@@ -63,6 +65,13 @@ def userpage(request):
     }
     return render(request, 'anchorage/admin/pages/userpage.html', context)
     # return render(request, 'anchorage/admin/partials/base.html', context)
+
+def nuevoLink(request):
+    # def get(self, request):
+    # if request.method == 'post':
+    link_form = LinkForm()
+    contexto = {'link_form' : link_form}
+    return render(request, 'anchorage/admin/pages/nuevo.html')
 
 def signup(request):
     if request.method == "POST":

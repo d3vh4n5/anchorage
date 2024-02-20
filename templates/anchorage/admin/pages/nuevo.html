@@ -1,0 +1,14 @@
+{% extends 'anchorage/admin/partials/base.html' %}
+{% load static %}
+{% block contenido %}
+    
+
+ <h1> Esta es la vista de neuvo, Aquí irá un form</h1>
+
+<form>
+    {% csrf_token %}
+    
+    {{ link_form}}
+</form>
+    
+{% endblock contenido %}
